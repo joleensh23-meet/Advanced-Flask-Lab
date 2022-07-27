@@ -38,21 +38,13 @@
 							<section class="thumbnails">
                 
                 <div>
+                	{%for key in posts%}
                       <a href="">
-                        <img src={{image_link}} alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src={{key}} alt="" />
+                        <h3>{{posts[key]}}</h3>
                       </a>
                 
-                      <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
-                        <h3>Caption... blah blah blah</h3>
-                      </a>
-                </div>    
-                <div>
-                  <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
-                      </a>
+                    {%endfor%}                     
                 </div>  
 
 							</section>
